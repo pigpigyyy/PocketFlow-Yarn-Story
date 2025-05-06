@@ -1,19 +1,64 @@
-<h1 align="center">Pocket Flow Project Template: Agentic Coding</h1>
+# Yarn故事游戏开发助手
 
-<p align="center">
-  <a href="https://github.com/The-Pocket/PocketFlow" target="_blank">
-    <img 
-      src="./assets/banner.png" width="800"
-    />
-  </a>
-</p>
+这是一个基于PocketFlow框架开发的Agent，用于自动化Yarn故事游戏的创作流程。它能够根据用户提供的游戏需求，自动生成背景故事、人物设定、章节内容，并将它们转换为符合Yarn语法的游戏脚本。
 
-This is a project template for Agentic Coding with [Pocket Flow](https://github.com/The-Pocket/PocketFlow), a 100-line LLM framework, and your editor of choice.
+## 功能特点
 
-- We have included the [.cursorrules](.cursorrules), [.clinerules](.clinerules), and [.windsurfrules](.windsurfrules) files to let Cursor AI (also Cline, or Windsurf) help you build LLM projects.
-  
-- Want to learn how to build LLM projects with Agentic Coding?
+- **背景故事生成**：根据用户提供的游戏需求，生成富有吸引力的背景故事
+- **人物设定设计**：基于背景故事创建详细的游戏角色设定
+- **故事流程规划**：划分多个章节，设计每个章节的剧情发展和人物互动
+- **Yarn脚本生成**：将故事内容转换为符合Yarn语法的交互式游戏脚本
 
-  - Check out the [Agentic Coding Guidance](https://the-pocket.github.io/PocketFlow/guide.html)
-    
-  - Check out the [YouTube Tutorial](https://www.youtube.com/@ZacharyLLM?sub_confirmation=1)
+## 工作流程
+
+1. **背景故事设计**：根据用户需求设计游戏背景故事
+2. **人物设定设计**：基于背景故事设计游戏角色
+3. **故事流程设计**：规划游戏章节和剧情发展
+4. **Yarn脚本编写**：将故事内容转换为交互式游戏脚本
+
+## 使用方法
+
+1. 安装依赖：
+```bash
+pip install -r requirements.txt
+```
+
+2. 运行程序：
+```bash
+python main.py
+```
+
+3. 按照提示输入游戏需求，系统将自动完成游戏内容的设计和脚本编写。
+
+## 输出文件
+
+- `background-story.md`：游戏背景故事
+- `characters.md`：游戏人物设定
+- `chapter-XX.md`：各章节内容
+- `chapter-XX.yarn`：对应的Yarn游戏脚本
+
+## 技术实现
+
+本项目基于PocketFlow框架实现，使用了以下核心组件：
+
+- **Node**：实现单一功能的处理节点
+- **BatchNode**：处理批量任务的节点
+- **Flow**：将多个节点连接为完整工作流
+- **DeepSeek Chat API**：提供AI生成能力
+
+## 项目结构
+
+```
+project/
+├── main.py           # 主程序入口
+├── flow.py           # 工作流定义
+├── nodes.py          # 节点实现
+├── utils/            # 工具函数
+│   ├── __init__.py
+│   └── call_llm.py   # LLM调用接口
+└── introduction-to-yarn.md  # Yarn语法指南
+```
+
+## 许可证
+
+MIT License
